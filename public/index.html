@@ -29,6 +29,28 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- Hidden form for Netlify to detect at build time -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="company" />
+      <select name="businessType">
+        <option value="manufacturer"></option>
+        <option value="distributor"></option>
+        <option value="wholesaler"></option>
+        <option value="retailer"></option>
+        <option value="mechanic"></option>
+        <option value="others"></option>
+      </select>
+      <input type="text" name="others" />
+      <textarea name="message"></textarea>
+      <input type="hidden" name="form-name" value="contact" />
+      <div hidden>
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </div>
+    </form>
     
   </body>
 </html>

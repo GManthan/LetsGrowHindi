@@ -35,6 +35,17 @@ function App() {
     }
   };
 
+  // Optional: show a quick loading state on submit while Netlify processes
+  const handleFormSubmit = (e) => {
+    const form = e.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+    // Do not preventDefault; let Netlify handle the POST + redirect
+  };
+
   const toggleMobileMenu = () => {
     const navMenu = document.querySelector('.nav-menu');
     const hamburger = document.querySelector('.hamburger');
@@ -381,7 +392,8 @@ function App() {
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
-                action="/?success=true"
+                action="/thank-you.html"
+                onSubmit={handleFormSubmit}
                 className="contact-form-fields"
               >
                 {/* Hidden field for Netlify Forms */}
