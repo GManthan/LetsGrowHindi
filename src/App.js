@@ -9,6 +9,20 @@ import photoImg from './photo.jpg';
 // Netlify Forms - no URL needed!
 
 function App() {
+  // Check if form was successfully submitted
+  const urlParams = new URLSearchParams(window.location.search);
+  const formSuccess = urlParams.get('success') === 'true';
+
+  // Clear URL parameter after showing success message
+  React.useEffect(() => {
+    if (formSuccess) {
+      // Show success message for 5 seconds, then clear URL
+      const timer = setTimeout(() => {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [formSuccess]);
   const handleBusinessTypeChange = (e) => {
     const othersField = document.getElementById('othersField');
     const othersInput = document.getElementById('others');
@@ -101,6 +115,24 @@ function App() {
 
   return (
     <div className="App">
+      {/* Success Message Banner */}
+      {formSuccess && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: '#4CAF50',
+          color: 'white',
+          padding: '15px',
+          textAlign: 'center',
+          zIndex: 9999,
+          fontSize: '18px',
+          fontWeight: 'bold'
+        }}>
+          ✅ Thank you! Your message has been sent successfully. We will get back to you soon!
+        </div>
+      )}
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
@@ -347,7 +379,7 @@ function App() {
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
-                action="/thank-you.html"
+                action="/?success=true"
                 className="contact-form-fields" 
                 onSubmit={handleFormSubmit}
               >
