@@ -37,15 +37,43 @@ function App() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    // For Netlify Forms, we don't prevent default - let Netlify handle it
-    // Netlify will automatically redirect to a thank you page or show success message
+  const handleFormSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission to avoid POST data warning
     
-    const submitButton = e.target.querySelector('button[type="submit"]');
+    const form = e.target;
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('button[type="submit"]');
     
     // Show loading state
-    submitButton.disabled = true;
-    submitButton.textContent = 'Sending...';
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Sending...';
+    }
+    
+    try {
+      // Submit to Netlify using fetch (avoids POST refresh warning)
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+      
+      if (response.ok || response.status === 200) {
+        // Success - redirect to homepage with success parameter using replace
+        window.location.replace('/?success=true');
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Sorry, there was an error sending your message. Please try again.');
+      
+      // Re-enable submit button
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
+      }
+    }
   };
 
   const toggleMobileMenu = () => {
@@ -379,7 +407,6 @@ function App() {
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
-                action="/?success=true"
                 className="contact-form-fields" 
                 onSubmit={handleFormSubmit}
               >
