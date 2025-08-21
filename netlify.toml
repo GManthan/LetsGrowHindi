@@ -9,3 +9,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# Enable form detection and processing
+[forms]
+  settings = true
