@@ -7,6 +7,7 @@ import logoImg from './logo.jpg';
 import photoImg from './photo.jpg';
 
 function App() {
+  const SHEETS_ENDPOINT = process.env.REACT_APP_SHEETS_URL;
   // Check if form was successfully submitted
   const urlParams = new URLSearchParams(window.location.search);
   const formSuccess = urlParams.get('success') === 'true';
@@ -42,6 +43,33 @@ function App() {
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = 'Sending...';
+    }
+    // Fire-and-forget: also send to Google Sheets Apps Script if configured
+    try {
+      if (SHEETS_ENDPOINT) {
+        const fd = new FormData(form);
+        // Include a timestamp and path for context
+        fd.append('submittedAt', new Date().toISOString());
+        fd.append('page', window.location.href);
+
+        const payloadObj = Object.fromEntries(fd.entries());
+        const json = JSON.stringify(payloadObj);
+
+        // Prefer beacon to avoid blocking navigation, fallback to keepalive fetch
+        if (navigator.sendBeacon) {
+          const blob = new Blob([json], { type: 'application/json' });
+          navigator.sendBeacon(SHEETS_ENDPOINT, blob);
+        } else {
+          fetch(SHEETS_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: json,
+            keepalive: true
+          }).catch(() => {});
+        }
+      }
+    } catch (_) {
+      // ignore client-side errors; Netlify will still receive the form
     }
     // Do not preventDefault; let Netlify handle the POST + redirect
   };
