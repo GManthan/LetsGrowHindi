@@ -6,8 +6,6 @@ import { faYoutube, faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/
 import logoImg from './logo.jpg';
 import photoImg from './photo.jpg';
 
-// Netlify Forms - no URL needed!
-
 function App() {
   // Check if form was successfully submitted
   const urlParams = new URLSearchParams(window.location.search);
@@ -35,48 +33,6 @@ function App() {
       othersInput.required = false;
       othersInput.value = '';
     }
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission to avoid POST data warning
-    
-    const form = e.target;
-    const submitButton = form.querySelector('button[type="submit"]');
-    
-    // Show loading state
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = 'Sending...';
-    }
-    
-    // Create a hidden form for Netlify submission
-    const netlifyForm = document.createElement('form');
-    netlifyForm.setAttribute('name', 'contact');
-    netlifyForm.setAttribute('method', 'POST');
-    netlifyForm.setAttribute('data-netlify', 'true');
-    netlifyForm.setAttribute('action', '/?success=true');
-    netlifyForm.style.display = 'none';
-    
-    // Copy all form data to the hidden form
-    const formData = new FormData(form);
-    for (let [key, value] of formData.entries()) {
-      const input = document.createElement('input');
-      input.setAttribute('type', 'hidden');
-      input.setAttribute('name', key);
-      input.setAttribute('value', value);
-      netlifyForm.appendChild(input);
-    }
-    
-    // Add to DOM, submit, then remove
-    document.body.appendChild(netlifyForm);
-    netlifyForm.submit();
-    
-    // Clean up after a short delay
-    setTimeout(() => {
-      if (document.body.contains(netlifyForm)) {
-        document.body.removeChild(netlifyForm);
-      }
-    }, 1000);
   };
 
   const toggleMobileMenu = () => {
@@ -405,13 +361,28 @@ function App() {
             <div className="contact-form">
               <h3>Start Your Growth Journey</h3>
               <p>Fill out our consultation form and let's discuss how we can help you achieve your business objectives.</p>
+              
+              {/* Success Message */}
+              {formSuccess && (
+                <div style={{
+                  backgroundColor: '#d4edda',
+                  color: '#155724',
+                  padding: '15px',
+                  borderRadius: '8px',
+                  marginBottom: '20px',
+                  border: '1px solid #c3e6cb'
+                }}>
+                  <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you soon.
+                </div>
+              )}
+              
               <form 
                 name="contact" 
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
-                className="contact-form-fields" 
-                onSubmit={handleFormSubmit}
+                action="/?success=true"
+                className="contact-form-fields"
               >
                 {/* Hidden field for Netlify Forms */}
                 <input type="hidden" name="form-name" value="contact" />
