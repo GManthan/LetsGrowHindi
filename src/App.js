@@ -32,13 +32,6 @@ function App() {
     // Show loading state
     submitButton.disabled = true;
     submitButton.textContent = 'Sending...';
-    
-    // Hide "others" field if it was shown (cleanup)
-    const othersField = document.getElementById('othersField');
-    const othersInput = document.getElementById('others');
-    if (othersField && othersField.style.display === 'block') {
-      // Don't hide it yet - let the form submit first
-    }
   };
 
   const toggleMobileMenu = () => {

@@ -1,7 +1,6 @@
 {
   "name": "automobile-website",
   "version": "0.1.0",
-  "homepage": "https://gmanthan.github.io/LetsGrowVentures",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
