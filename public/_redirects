@@ -1,0 +1,5 @@
+# Netlify form handling
+/thank-you /thank-you.html 200
+
+# Fallback for React Router
+/* /index.html 200

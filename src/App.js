@@ -347,6 +347,7 @@ function App() {
                 method="POST" 
                 data-netlify="true" 
                 netlify-honeypot="bot-field"
+                action="/thank-you.html"
                 className="contact-form-fields" 
                 onSubmit={handleFormSubmit}
               >
