@@ -37,11 +37,10 @@ function App() {
     }
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission to avoid POST data warning
     
     const form = e.target;
-    const formData = new FormData(form);
     const submitButton = form.querySelector('button[type="submit"]');
     
     // Show loading state
@@ -50,30 +49,34 @@ function App() {
       submitButton.textContent = 'Sending...';
     }
     
-    try {
-      // Submit to Netlify using fetch (avoids POST refresh warning)
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
-      });
-      
-      if (response.ok || response.status === 200) {
-        // Success - redirect to homepage with success parameter using replace
-        window.location.replace('/?success=true');
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      alert('Sorry, there was an error sending your message. Please try again.');
-      
-      // Re-enable submit button
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
-      }
+    // Create a hidden form for Netlify submission
+    const netlifyForm = document.createElement('form');
+    netlifyForm.setAttribute('name', 'contact');
+    netlifyForm.setAttribute('method', 'POST');
+    netlifyForm.setAttribute('data-netlify', 'true');
+    netlifyForm.setAttribute('action', '/?success=true');
+    netlifyForm.style.display = 'none';
+    
+    // Copy all form data to the hidden form
+    const formData = new FormData(form);
+    for (let [key, value] of formData.entries()) {
+      const input = document.createElement('input');
+      input.setAttribute('type', 'hidden');
+      input.setAttribute('name', key);
+      input.setAttribute('value', value);
+      netlifyForm.appendChild(input);
     }
+    
+    // Add to DOM, submit, then remove
+    document.body.appendChild(netlifyForm);
+    netlifyForm.submit();
+    
+    // Clean up after a short delay
+    setTimeout(() => {
+      if (document.body.contains(netlifyForm)) {
+        document.body.removeChild(netlifyForm);
+      }
+    }, 1000);
   };
 
   const toggleMobileMenu = () => {
