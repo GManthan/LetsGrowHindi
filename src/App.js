@@ -380,7 +380,7 @@ function App() {
               <form 
                 name="contact" 
                 method="POST" 
-                action="https://sheetdb.io/api/v1/1wxurxfvgjdmw"
+                action="https://sheetdb.io/api/v1/u042ecer08g72"
                 className="contact-form-fields"
               >
                 {/* Hidden field for Netlify Forms */}
