@@ -118,7 +118,7 @@ function App() {
           fontSize: '18px',
           fontWeight: 'bold'
         }}>
-          ✅ Thank you! Your message has been sent successfully. We will get back to you soon!
+          ✅ धन्यवाद! आपका संदेश सफलतापूर्वक भेजा गया है। हम जल्द ही आपसे संपर्क करेंगे!
         </div>
       )}
       {/* Navigation */}
@@ -133,11 +133,11 @@ function App() {
             <span></span>
           </div>
           <ul className="nav-menu">
-            <li><a href="#home" onClick={closeMobileMenu}>Home</a></li>
-            <li><a href="#services" onClick={closeMobileMenu}>Services</a></li>
-            <li><a href="#testimonials" onClick={closeMobileMenu}>Testimonials</a></li>
-            <li><a href="#story" onClick={closeMobileMenu}>About</a></li>
-            <li><a href="#contact" onClick={closeMobileMenu}>Contact</a></li>
+            <li><a href="#home" onClick={closeMobileMenu}>होम</a></li>
+            <li><a href="#services" onClick={closeMobileMenu}>सेवाएं</a></li>
+            <li><a href="#testimonials" onClick={closeMobileMenu}>प्रशंसापत्र</a></li>
+            <li><a href="#story" onClick={closeMobileMenu}>हमारे बारे में</a></li>
+            <li><a href="#contact" onClick={closeMobileMenu}>संपर्क</a></li>
           </ul>
         </div>
       </nav>
@@ -146,11 +146,11 @@ function App() {
       <section id="home" className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1>Driving Growth in <span className="highlight">Automobile</span> Aftermarket</h1>
-            <p>With over 30 years of experience in the automotive industry, spanning distribution and 5+ years as a business growth officer, we help automotive businesses accelerate their success in the automobile aftermarket.</p>
+            <h1><span className="highlight">ऑटोमोबाइल</span> आफ्टरमार्केट में विकास को बढ़ावा देना</h1>
+            <p>ऑटोमोटिव उद्योग में 30 से अधिक वर्षों के अनुभव के साथ, वितरण और 5+ वर्षों के व्यापारिक विकास अधिकारी के रूप में, हम ऑटोमोटिव व्यवसायों को ऑटोमोबाइल आफ्टरमार्केट में उनकी सफलता को तेज़ करने में मदद करते हैं।</p>
             <div className="hero-buttons">
-              <a href="#contact"><button className="btn-primary">Get Started</button></a>
-              <a href="#story"><button className="btn-secondary">Learn More</button></a>
+              <a href="#contact"><button className="btn-primary">शुरू करें</button></a>
+              <a href="#story"><button className="btn-secondary">और जानें</button></a>
             </div>
             <div className="social-links">
               <a href="https://youtube.com/@lgnandedkar2041?si=r7vkf1uCdOOQujYy" target="_blank" rel="noopener noreferrer" className="youtube">
@@ -184,21 +184,21 @@ function App() {
               <FontAwesomeIcon icon={faCalendarAlt} />
             </div>
             <div className="stat-number">30+</div>
-            <div className="stat-label">Years of Industry Experience</div>
+            <div className="stat-label">वर्षों का उद्योग अनुभव</div>
           </div>
           <div className="stat-item">
             <div className="stat-icon">
               <FontAwesomeIcon icon={faRocket} />
             </div>
             <div className="stat-number">5+</div>
-            <div className="stat-label">Years of Business Consulting</div>
+            <div className="stat-label">वर्षों का व्यापारिक परामर्श</div>
           </div>
           <div className="stat-item">
             <div className="stat-icon">
               <FontAwesomeIcon icon={faHandshake} />
             </div>
             <div className="stat-number">9+</div>
-            <div className="stat-label">Successful Collaborations</div>
+            <div className="stat-label">सफल सहयोग</div>
           </div>
         </div>
       </section>
@@ -210,50 +210,50 @@ function App() {
       <section id="services" className="section services">
         <div className="section-gradient"></div>
         <div className="container">
-          <h2>Comprehensive Consulting Solutions</h2>
-          <p>Strategic consulting solutions and proven methodologies to accelerate sustainable growth in the competitive automotive aftermarket industry</p>
+          <h2>व्यापक परामर्श समाधान</h2>
+          <p>प्रतिस्पर्धी ऑटोमोटिव आफ्टरमार्केट उद्योग में स्थायी विकास को तेज़ करने के लिए रणनीतिक परामर्श समाधान और सिद्ध पद्धतियां</p>
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faIndustry} />
               </div>
-              <h3>Market Research & Analysis</h3>
-              <p>In-depth market research and competitive analysis to identify untapped opportunities and optimize your market positioning in the aftermarket sector.</p>
+              <h3>बाजार अनुसंधान और विश्लेषण</h3>
+              <p>आफ्टरमार्केट क्षेत्र में अनुपयोग अवसरों की पहचान करने और आपकी बाजार स्थिति को अनुकूलित करने के लिए गहन बाजार अनुसंधान और प्रतिस्पर्धी विश्लेषण।</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faChartBar} />
               </div>
-              <h3>Strategic Business Development</h3>
-              <p>Comprehensive business strategy development tailored specifically for automobile aftermarket businesses, focusing on sustainable growth and competitive advantage.</p>
+              <h3>रणनीतिक व्यापार विकास</h3>
+              <p>ऑटोमोबाइल आफ्टरमार्केट व्यवसायों के लिए विशेष रूप से तैयार किया गया व्यापक व्यापारिक रणनीति विकास, स्थायी विकास और प्रतिस्पर्धी लाभ पर ध्यान केंद्रित करते हुए।</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faTruck} />
               </div>
-              <h3>Supply Chain Excellence</h3>
-              <p>Streamline your supply chain operations with proven methodologies that maximize efficiency, reduce costs, and improve delivery performance.</p>
+              <h3>आपूर्ति श्रृंखला उत्कृष्टता</h3>
+              <p>सिद्ध पद्धतियों के साथ अपनी आपूर्ति श्रृंखला संचालन को व्यवस्थित करें जो दक्षता को अधिकतम करती है, लागत को कम करती है, और डिलीवरी प्रदर्शन में सुधार करती है।</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faRocket} />
               </div>
-              <h3>Growth Acceleration</h3>
-              <p>Personalized consulting services designed to accelerate your business growth, enhance market penetration, and maximize profitability in the automotive aftermarket.</p>
+              <h3>विकास त्वरण</h3>
+              <p>आपके व्यापारिक विकास को तेज़ करने, बाजार प्रवेश को बढ़ाने, और ऑटोमोटिव आफ्टरमार्केट में लाभप्रदता को अधिकतम करने के लिए व्यक्तिगत परामर्श सेवाएं।</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faLaptopCode} />
               </div>
-              <h3>Digital Transformation</h3>
-              <p>Modernize your operations with cutting-edge digital solutions, automation technologies, and data-driven insights to stay competitive in the digital age.</p>
+              <h3>डिजिटल परिवर्तन</h3>
+              <p>डिजिटल युग में प्रतिस्पर्धी बने रहने के लिए अत्याधुनिक डिजिटल समाधान, स्वचालन प्रौद्योगिकी, और डेटा-संचालित अंतर्दृष्टि के साथ अपने संचालन को आधुनिक बनाएं।</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
                 <FontAwesomeIcon icon={faUserTie} />
               </div>
-              <h3>Team Development & Training</h3>
-              <p>Comprehensive training programs and skill development initiatives to upskill your team and improve operational efficiency across all departments.</p>
+              <h3>टीम विकास और प्रशिक्षण</h3>
+              <p>आपकी टीम को कुशल बनाने और सभी विभागों में परिचालन दक्षता में सुधार करने के लिए व्यापक प्रशिक्षण कार्यक्रम और कौशल विकास पहल।</p>
             </div>
           </div>
         </div>
@@ -266,34 +266,34 @@ function App() {
       <section id="testimonials" className="section testimonials">
         <div className="section-gradient"></div>
         <div className="container">
-          <h2>Success Stories & Client Testimonials</h2>
-          <p>Hear from our satisfied clients who have transformed their businesses with our expert guidance and strategic consulting services</p>
+          <h2>सफलता की कहानियां और ग्राहक प्रशंसापत्र</h2>
+          <p>हमारे संतुष्ट ग्राहकों से सुनें जिन्होंने हमारे विशेषज्ञ मार्गदर्शन और रणनीतिक परामर्श सेवाओं के साथ अपने व्यवसायों को रूपांतरित किया है</p>
           <div className="testimonials-container">
             <div className="photo-testimonials">
-              <h3>Client Success Stories</h3>
+              <h3>ग्राहक सफलता की कहानियां</h3>
               <div className="testimonials-grid">
                 <div className="testimonial-card">
                   <div className="testimonial-avatar">R</div>
-                  <p>"The expertise and strategic guidance provided helped us increase our market share by 40% within the first year. Their deep understanding of the automotive aftermarket is unparalleled."</p>
+                  <p>"प्रदान की गई विशेषज्ञता और रणनीतिक मार्गदर्शन ने हमें पहले वर्ष के भीतर अपना बाजार हिस्सा 40% बढ़ाने में मदद की। ऑटोमोटिव आफ्टरमार्केट की उनकी गहरी समझ अद्वितीय है।"</p>
                   <div className="testimonial-author">
-                    <strong>Robert Wilson</strong>
-                    <span>VP Sales, AutoMotive Inc.</span>
+                    <strong>रॉबर्ट विल्सन</strong>
+                    <span>वीपी सेल्स, ऑटोमोटिव इंक.</span>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <div className="testimonial-avatar">L</div>
-                  <p>"Outstanding consulting services that completely transformed our business operations and profitability. The ROI from their recommendations has been exceptional."</p>
+                  <p>"उत्कृष्ट परामर्श सेवाएं जिन्होंने हमारे व्यापारिक संचालन और लाभप्रदता को पूरी तरह से बदल दिया। उनकी सिफारिशों से आरओआई असाधारण रहा है।"</p>
                   <div className="testimonial-author">
-                    <strong>Lisa Chen</strong>
-                    <span>Owner, Parts Paradise</span>
+                    <strong>लिसा चेन</strong>
+                    <span>मालिक, पार्ट्स पैराडाइज़</span>
                   </div>
                 </div>
                 <div className="testimonial-card">
                   <div className="testimonial-avatar">D</div>
-                  <p>"Professional, knowledgeable, and results-driven approach. I highly recommend their services to any automotive business looking to scale and grow."</p>
+                  <p>"पेशेवर, जानकार, और परिणाम-केंद्रित दृष्टिकोण। मैं किसी भी ऑटोमोटिव व्यवसाय को उनकी सेवाओं की अत्यधिक सिफारिश करता हूं जो स्केल और विकास की तलाश में है।"</p>
                   <div className="testimonial-author">
-                    <strong>David Martinez</strong>
-                    <span>COO, FastTrack Auto</span>
+                    <strong>डेविड मार्टिनेज़</strong>
+                    <span>सीओओ, फास्टट्रैक ऑटो</span>
                   </div>
                 </div>
               </div>
@@ -309,8 +309,8 @@ function App() {
       <section id="story" className="section story">
         <div className="section-gradient"></div>
         <div className="container">
-          <h2>Professional Profile, Vision & Mission</h2>
-          <p>Three decades of industry leadership, strategic vision, and commitment to automotive aftermarket excellence</p>
+          <h2>व्यावसायिक प्रोफ़ाइल, दृष्टिकोण और मिशन</h2>
+          <p>तीन दशकों का उद्योग नेतृत्व, रणनीतिक दृष्टिकोण, और ऑटोमोटिव आफ्टरमार्केट उत्कृष्टता के लिए प्रतिबद्धता</p>
           <div className="story-content">
             <div className="story-item">
               <div className="story-content-text">
@@ -318,9 +318,9 @@ function App() {
                   <div className="story-icon">
                     <FontAwesomeIcon icon={faBookOpen} />
                   </div>
-                  <h3>Professional Profile</h3>
+                  <h3>व्यावसायिक प्रोफ़ाइल</h3>
                 </div>
-                <p>Laxmikant Nandedkar is a seasoned business owner, writer, and speaker with a distinguished presence in the two-wheeler spare parts aftermarket sector. Since 1995, he has led his own distribution business, focusing on the automotive spares industry. With a Bachelor's in Engineering from Rajarambapu Institute of Technology, he combines technical expertise with extensive business acumen. As a renowned public speaker and industry mentor, he shares practical insights at sectoral events and maintains an active digital presence, educating professionals through social media platforms and training consultancy services.</p>
+                <p>लक्ष्मीकांत नांदेडकर एक अनुभवी व्यापारी, लेखक और वक्ता हैं जिनकी दोपहिया स्पेयर पार्ट्स आफ्टरमार्केट क्षेत्र में एक विशिष्ट उपस्थिति है। 1995 से, उन्होंने ऑटोमोटिव स्पेयर्स उद्योग पर ध्यान केंद्रित करते हुए अपना वितरण व्यापार चलाया है। राजाराम बापू प्रौद्योगिकी संस्थान से इंजीनियरिंग में स्नातक के साथ, वे तकनीकी विशेषज्ञता को व्यापक व्यापारिक कौशल के साथ जोड़ते हैं। एक प्रसिद्ध सार्वजनिक वक्ता और उद्योग गुरु के रूप में, वे क्षेत्रीय कार्यक्रमों में व्यावहारिक अंतर्दृष्टि साझा करते हैं और एक सक्रिय डिजिटल उपस्थिति बनाए रखते हैं, सोशल मीडिया प्लेटफार्म और प्रशिक्षण परामर्श सेवाओं के माध्यम से पेशेवरों को शिक्षित करते हैं।</p>
               </div>
             </div>
             <div className="story-item">
@@ -329,9 +329,9 @@ function App() {
                   <div className="story-icon">
                     <FontAwesomeIcon icon={faEye} />
                   </div>
-                  <h3>Our Vision</h3>
+                  <h3>हमारा दृष्टिकोण</h3>
                 </div>
-                <p>To strengthen aftermarket community by sharing knowledge and driving collective growth among distributors, wholesalers, retailers, and industry partners in the two wheeler spares industry.</p>
+                <p>दोपहिया स्पेयर्स उद्योग में वितरकों, थोक विक्रेताओं, खुदरा विक्रेताओं और उद्योग भागीदारों के बीच ज्ञान साझा करने और सामूहिक विकास को बढ़ावा देकर आफ्टरमार्केट समुदाय को मजबूत बनाना।</p>
               </div>
             </div>
             <div className="story-item">
@@ -340,9 +340,9 @@ function App() {
                   <div className="story-icon">
                     <FontAwesomeIcon icon={faBullseye} />
                   </div>
-                  <h3>Our Mission</h3>
+                  <h3>हमारा मिशन</h3>
                 </div>
-                <p>To connect, educate, and motivate auto aftermarket professionals by curating relevant market trends, celebrating community accomplishments, and sharing proven tactics that elevate performance and prosperity across the sector.</p>
+                <p>प्रासंगिक बाजार रुझानों को क्यूरेट करके, समुदायिक उपलब्धियों का जश्न मनाकर, और सिद्ध रणनीतियों को साझा करके ऑटो आफ्टरमार्केट पेशेवरों को जोड़ना, शिक्षित करना और प्रेरित करना जो क्षेत्र में प्रदर्शन और समृद्धि को बढ़ाती है।</p>
               </div>
             </div>
           </div>
@@ -356,12 +356,12 @@ function App() {
       <section id="contact" className="section contact">
         <div className="section-gradient"></div>
         <div className="container">
-          <h2>Let's Drive Your Success Together</h2>
-          <p>Ready to accelerate your business growth and dominate the automotive aftermarket? Connect with us today to start your transformation journey.</p>
+          <h2>आइए मिलकर आपकी सफलता को आगे बढ़ाएं</h2>
+          <p>अपने व्यापारिक विकास को तेज़ करने और ऑटोमोटिव आफ्टरमार्केट में दबदबा बनाने के लिए तैयार हैं? आज ही हमसे जुड़ें और अपनी रूपांतरण यात्रा शुरू करें।</p>
           <div className="contact-content">
             <div className="contact-form">
-              <h3>Start Your Growth Journey</h3>
-              <p>Fill out our consultation form and let's discuss how we can help you achieve your business objectives.</p>
+              <h3>अपनी विकास यात्रा शुरू करें</h3>
+              <p>हमारा परामर्श फॉर्म भरें और आइए चर्चा करते हैं कि हम आपको आपके व्यापारिक उद्देश्यों को प्राप्त करने में कैसे मदद कर सकते हैं।</p>
               
               {/* Success Message */}
               {formSuccess && (
@@ -373,7 +373,7 @@ function App() {
                   marginBottom: '20px',
                   border: '1px solid #c3e6cb'
                 }}>
-                  <strong>Thank you!</strong> Your message has been sent successfully. We will get back to you soon.
+                  <strong>धन्यवाद!</strong> आपका संदेश सफलतापूर्वक भेजा गया है। हम जल्द ही आपसे संपर्क करेंगे।
                 </div>
               )}
               
@@ -391,61 +391,61 @@ function App() {
                 </div>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="firstName">First Name *</label>
+                    <label htmlFor="firstName">पहला नाम *</label>
                     <input type="text" id="firstName" name="firstName" required />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="lastName">Last Name *</label>
+                    <label htmlFor="lastName">अंतिम नाम *</label>
                     <input type="text" id="lastName" name="lastName" required />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label htmlFor="email">Email Address *</label>
+                  <label htmlFor="email">ईमेल पता *</label>
                   <input type="email" id="email" name="email" required />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="phone">Phone Number *</label>
+                  <label htmlFor="phone">फोन नंबर *</label>
                   <input type="tel" id="phone" name="phone" required />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="company">Shop/Company Name *</label>
+                  <label htmlFor="company">दुकान/कंपनी का नाम *</label>
                   <input type="text" id="company" name="company" required />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="businessType">Type of Business *</label>
+                  <label htmlFor="businessType">व्यापार का प्रकार *</label>
                   <select id="businessType" name="businessType" required onChange={handleBusinessTypeChange}>
-                    <option value="">Select business type</option>
-                    <option value="manufacturer">Manufacturer</option>
-                    <option value="distributor">Distributor</option>
-                    <option value="wholesaler">Wholesaler</option>
-                    <option value="retailer">Retailer</option>
-                    <option value="mechanic">Mechanic</option>
-                    <option value="others">Others</option>
+                    <option value="">व्यापार का प्रकार चुनें</option>
+                    <option value="manufacturer">निर्माता</option>
+                    <option value="distributor">वितरक</option>
+                    <option value="wholesaler">थोक विक्रेता</option>
+                    <option value="retailer">खुदरा विक्रेता</option>
+                    <option value="mechanic">मैकेनिक</option>
+                    <option value="others">अन्य</option>
                   </select>
                 </div>
                 <div className="form-group" id="othersField" style={{display: 'none'}}>
-                  <label htmlFor="others">Please specify *</label>
+                  <label htmlFor="others">कृपया निर्दिष्ट करें *</label>
                   <input type="text" id="others" name="others" />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="message">Message *</label>
-                  <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+                  <label htmlFor="message">संदेश *</label>
+                  <textarea id="message" name="message" rows="5" required placeholder="हम आपकी कैसे मदद कर सकते हैं?"></textarea>
                 </div>
-                <button type="submit" className="btn-primary">Send Message</button>
+                <button type="submit" className="btn-primary">संदेश भेजें</button>
               </form>
             </div>
             <div className="contact-info">
               <div className="contact-item">
-                <h4><FontAwesomeIcon icon={faEnvelope} /> Email</h4>
+                <h4><FontAwesomeIcon icon={faEnvelope} /> ईमेल</h4>
                 <p><a href="mailto:laxmikantnandedkar@gmail.com">laxmikantnandedkar@gmail.com</a></p>
               </div>
               <div className="contact-item">
-                <h4><FontAwesomeIcon icon={faPhone} /> Phone</h4>
+                <h4><FontAwesomeIcon icon={faPhone} /> फोन</h4>
                 <p><a href="tel:+919673388415">+91 96733 88415</a></p>
               </div>
               <div className="contact-item">
-                <h4><FontAwesomeIcon icon={faBlog} /> Blog</h4>
-                <p><a href="https://medium.com/@LaxmikantNandedkar" target="_blank" rel="noopener noreferrer">Follow us on Medium</a></p>
+                <h4><FontAwesomeIcon icon={faBlog} /> ब्लॉग</h4>
+                <p><a href="https://medium.com/@LaxmikantNandedkar" target="_blank" rel="noopener noreferrer">मीडियम पर हमें फॉलो करें</a></p>
               </div>
             </div>
           </div>
@@ -455,7 +455,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Automobile Aftermarket Consulting. All rights reserved.</p>
+          <p>&copy; 2024 ऑटोमोबाइल आफ्टरमार्केट परामर्श। सभी अधिकार सुरक्षित।</p>
         </div>
       </footer>
     </div>
