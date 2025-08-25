@@ -172,7 +172,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero::before {
@@ -203,8 +203,11 @@ body {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
+    line-height: 1.4;
     color: #2c3e50;
+    overflow: visible;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .hero-content .highlight {
@@ -1088,6 +1091,8 @@ body {
     
     .hero-content h1 {
         font-size: 3rem;
+        line-height: 1.4;
+        overflow: visible;
     }
     
     .stats-container {
@@ -1161,6 +1166,8 @@ body {
     .hero-content h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
+        line-height: 1.4;
+        overflow: visible;
     }
     
     .hero-content p {
