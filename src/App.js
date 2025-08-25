@@ -8,6 +8,8 @@ import photoImg from './photo.jpg';
 
 function App() {
   const SHEETS_ENDPOINT = process.env.REACT_APP_SHEETS_URL;
+  console.log("Sheets URL:", SHEETS_ENDPOINT);
+
   // Check if form was successfully submitted
   const urlParams = new URLSearchParams(window.location.search);
   const formSuccess = urlParams.get('success') === 'true';
