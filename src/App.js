@@ -147,7 +147,7 @@ function App() {
         <div className="hero-container">
           <div className="hero-content">
             <h1>Driving Growth in <span className="highlight">Automobile</span> Aftermarket</h1>
-            <p>With over 30 years of experience in the automotive industry, spanning trading and 5+ years as a business growth consultant, we help automotive businesses accelerate their success in the automobile aftermarket industry.</p>
+            <p>With over 30 years of experience in the automotive industry, spanning distribution and 5+ years as a business growth officer, we help automotive businesses accelerate their success in the automobile aftermarket.</p>
             <div className="hero-buttons">
               <a href="#contact"><button className="btn-primary">Get Started</button></a>
               <a href="#story"><button className="btn-secondary">Learn More</button></a>
@@ -215,17 +215,17 @@ function App() {
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">
-                <FontAwesomeIcon icon={faChartBar} />
-              </div>
-              <h3>Strategic Business Development</h3>
-              <p>Comprehensive business strategy development tailored specifically for automobile aftermarket businesses, focusing on sustainable growth and competitive advantage.</p>
-            </div>
-            <div className="service-card">
-              <div className="service-icon">
                 <FontAwesomeIcon icon={faIndustry} />
               </div>
               <h3>Market Research & Analysis</h3>
               <p>In-depth market research and competitive analysis to identify untapped opportunities and optimize your market positioning in the aftermarket sector.</p>
+            </div>
+            <div className="service-card">
+              <div className="service-icon">
+                <FontAwesomeIcon icon={faChartBar} />
+              </div>
+              <h3>Strategic Business Development</h3>
+              <p>Comprehensive business strategy development tailored specifically for automobile aftermarket businesses, focusing on sustainable growth and competitive advantage.</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
@@ -408,8 +408,8 @@ function App() {
                   <input type="tel" id="phone" name="phone" required />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="company">Shop/Company Name</label>
-                  <input type="text" id="company" name="company" />
+                  <label htmlFor="company">Shop/Company Name *</label>
+                  <input type="text" id="company" name="company" required />
                 </div>
                 <div className="form-group">
                   <label htmlFor="businessType">Type of Business *</label>
