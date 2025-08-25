@@ -432,14 +432,17 @@ function App() {
       <section id="home" className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1>{t.hero.title.includes('Automobile') ? 
-                `Driving Growth in ` : 
-                t.hero.title.split('ऑटोमोबाइल')[0]
-              }<span className="highlight">{t.hero.title.includes('Automobile') ? 'Automobile' : 'ऑटोमोबाइल'}</span>{
-                t.hero.title.includes('Automobile') ? 
-                ' Aftermarket' : 
-                t.hero.title.split('ऑटोमोबाइल')[1]
-              }</h1>
+            <h1>
+              {t.hero.title === 'ऑटोमोबाइल आफ्टरमार्केट में विकास को बढ़ावा देना' ? (
+                <>
+                  <span className="highlight">ऑटोमोबाइल</span> आफ्टरमार्केट में विकास को बढ़ावा देना
+                </>
+              ) : (
+                <>
+                  Driving Growth in <span className="highlight">Automobile</span> Aftermarket
+                </>
+              )}
+            </h1>
             <p>{t.hero.subtitle}</p>
             <div className="hero-buttons">
               <a href="#contact"><button className="btn-primary">{t.hero.getStarted}</button></a>
