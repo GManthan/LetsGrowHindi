@@ -410,7 +410,6 @@ function App() {
           <div className="logo">
             <img src={logoImg} alt="Company Logo" />
           </div>
-          <LanguageSwitch />
           <div className="hamburger" onClick={toggleMobileMenu}>
             <span></span>
             <span></span>
@@ -422,6 +421,9 @@ function App() {
             <li><a href="#testimonials" onClick={closeMobileMenu}>{t.nav.testimonials}</a></li>
             <li><a href="#story" onClick={closeMobileMenu}>{t.nav.about}</a></li>
             <li><a href="#contact" onClick={closeMobileMenu}>{t.nav.contact}</a></li>
+            <li className="nav-language">
+              <LanguageSwitch />
+            </li>
           </ul>
         </div>
       </nav>

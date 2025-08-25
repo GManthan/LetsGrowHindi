@@ -22,20 +22,16 @@ body {
     background: linear-gradient(135deg, #007bff, #0056b3);
     border: none;
     color: white;
-    padding: 8px 12px;
-    border-radius: 20px;
+    padding: 6px 10px;
+    border-radius: 15px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
+    gap: 4px;
+    font-size: 12px;
     font-weight: 500;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
 }
 
 .language-switch:hover {
@@ -46,14 +42,27 @@ body {
 
 .language-switch span {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 11px;
+}
+
+/* Navigation language item styles */
+.nav-language {
+    display: flex;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
+    .nav-language {
+        margin-top: 10px;
+        justify-content: center;
+    }
+    
     .language-switch {
-        top: 15px;
-        right: 15px;
-        padding: 6px 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .language-switch span {
         font-size: 12px;
     }
 }
